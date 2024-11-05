@@ -33,5 +33,13 @@ namespace winOsManagement
             processesForm.ShowDialog();
             this.Show();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            DeviceManagementForm deviceManagementForm = new DeviceManagementForm();
+            deviceManagementForm.ShowDialog();
+            this.Show();
+        }
     }
 }

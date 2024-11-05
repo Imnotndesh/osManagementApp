@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DeviceManagementForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeviceManagementForm.Designer.cs">
+      <DependentUpon>DeviceManagementForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="FileInfoForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +90,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="DeviceManagementForm.resx">
+      <DependentUpon>DeviceManagementForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FileInfoForm.resx">
       <DependentUpon>FileInfoForm.cs</DependentUpon>
     </EmbeddedResource>
