@@ -31,9 +31,9 @@ namespace winOsManagement
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -69,14 +69,14 @@ namespace winOsManagement
             this.label1.Text = "Device Management";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // button1
+            // button3
             // 
-            this.button1.Location = new System.Drawing.Point(14, 32);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(256, 56);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "List Devices";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button3.Location = new System.Drawing.Point(17, 239);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(253, 60);
+            this.button3.TabIndex = 2;
+            this.button3.Text = "Mount Device";
+            this.button3.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
@@ -87,14 +87,15 @@ namespace winOsManagement
             this.button2.Text = "Eject Device";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // button1
             // 
-            this.button3.Location = new System.Drawing.Point(17, 239);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(253, 60);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Mount Device";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button1.Location = new System.Drawing.Point(14, 32);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(256, 56);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "List Devices";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // DeviceManagementForm
             // 

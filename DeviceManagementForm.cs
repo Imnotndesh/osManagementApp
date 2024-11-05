@@ -16,5 +16,12 @@ namespace winOsManagement
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DeviceListForm deviceListForm = new DeviceListForm();
+            this.Hide();
+            deviceListForm.ShowDialog();
+        }
     }
 }
