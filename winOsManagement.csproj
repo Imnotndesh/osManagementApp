@@ -80,6 +80,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="ipcForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ipcForm.Designer.cs">
+      <DependentUpon>ipcForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="LaunchProcessForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +120,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ipcForm.resx">
+      <DependentUpon>ipcForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LaunchProcessForm.resx">
       <DependentUpon>LaunchProcessForm.cs</DependentUpon>
