@@ -74,6 +74,7 @@ namespace winOsManagement
             this.button3.TabIndex = 2;
             this.button3.Text = "Demo PIPE communication";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 

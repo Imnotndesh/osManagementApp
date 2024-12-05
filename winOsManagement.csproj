@@ -92,6 +92,12 @@
     <Compile Include="LaunchProcessForm.Designer.cs">
       <DependentUpon>LaunchProcessForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="PipeDemoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PipeDemoForm.Designer.cs">
+      <DependentUpon>PipeDemoForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Processes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,6 +138,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LaunchProcessForm.resx">
       <DependentUpon>LaunchProcessForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PipeDemoForm.resx">
+      <DependentUpon>PipeDemoForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Processes.resx">
       <DependentUpon>Processes.cs</DependentUpon>
