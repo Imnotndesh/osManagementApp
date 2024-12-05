@@ -31,11 +31,11 @@ namespace winOsManagement
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.label1 = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -73,6 +73,25 @@ namespace winOsManagement
             this.label1.Text = "Dashboard";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(12, 364);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(248, 48);
+            this.button5.TabIndex = 4;
+            this.button5.Text = "Interprocess Communication";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(12, 284);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(249, 50);
+            this.button4.TabIndex = 3;
+            this.button4.Text = "Memory Management";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(12, 204);
@@ -102,24 +121,6 @@ namespace winOsManagement
             this.button1.Text = "File Management";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(12, 284);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(249, 50);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Memory Management";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(12, 364);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(248, 48);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Interprocess Communication";
-            this.button5.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 

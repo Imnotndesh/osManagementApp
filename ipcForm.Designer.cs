@@ -31,8 +31,8 @@ namespace winOsManagement
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.label1 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -66,15 +66,6 @@ namespace winOsManagement
             this.label1.TabIndex = 0;
             this.label1.Text = "Inter-Process Communication";
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(91, 77);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(237, 58);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Demo SOCKET communication";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(93, 192);
@@ -83,6 +74,16 @@ namespace winOsManagement
             this.button3.TabIndex = 2;
             this.button3.Text = "Demo PIPE communication";
             this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(91, 77);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(237, 58);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "Demo SOCKET communication";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // ipcForm
             // 

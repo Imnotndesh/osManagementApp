@@ -41,5 +41,13 @@ namespace winOsManagement
             deviceManagementForm.ShowDialog();
             this.Show();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ipcForm ipcform = new ipcForm();
+            ipcform.ShowDialog();
+            this.Show();
+        }
     }
 }

@@ -16,5 +16,13 @@ namespace winOsManagement
         {
             InitializeComponent();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            SocketIPCForm socketForm = new SocketIPCForm();
+            socketForm.ShowDialog();
+            this.Show();
+        }
     }
 }
