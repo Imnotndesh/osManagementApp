@@ -19,57 +19,45 @@ namespace winOsManagement
         }
         private void StartPipeServer()
         {
-            _serverThread = new Thread(() =>
+            new Thread(() =>
             {
                 try
                 {
-                    // Create the named pipe for communication
+                    // Create the named pipe server
                     using (NamedPipeServerStream pipeServer = new NamedPipeServerStream("TestPipe", PipeDirection.InOut, 1, PipeTransmissionMode.Byte, PipeOptions.None))
                     {
-                        updateLogs(serverFrom, "Server started. Waiting for client to connect...");
+                        updateLogs(serverFrom,"Waiting for client to connect...");
 
-                        // Wait for the client to connect
+                        // Wait for a client to connect
                         pipeServer.WaitForConnection();
-                        updateLogs(serverFrom, "Client connected.");
+                        updateLogs(serverFrom," Client connected.");
 
-                        // Read the message from the client
+                        // Read the client's message
                         using (StreamReader sr = new StreamReader(pipeServer))
-                        {
-                            string clientMessage = sr.ReadLine();  // Reading one line of text
-                            updateLogs(serverFrom,$"Message received: {clientMessage}");
-                        }
-
-                        // Send a response to the client
                         using (StreamWriter sw = new StreamWriter(pipeServer))
                         {
-                            string response = "Message received: " + clientMessage;
-                            sw.WriteLine(response);
-                            sw.Flush(); // Ensure the message is sent immediately
-                            updateLogs(serverFrom,"Response sent to client.");
+                            string clientMessage = sr.ReadLine();
+                            updateLogs(serverFrom,$"Received message: {clientMessage}");
                         }
-
-                        // Close the pipe connection after communication
-                        updateLogs(serverFrom,"Communication completed. Closing pipe.");
+                        pipeServer.Close();
+                        updateLogs(serverFrom,"Server connection closed.");
                     }
                 }
                 catch (IOException ex)
                 {
-                    updateLogs(serverFrom, $"Pipe error: {ex.Message}");
+                    updateLogs(serverFrom,$"Pipe error: {ex.Message}");
                 }
                 catch (Exception ex)
                 {
-                    updateLogs(serverFrom, $"General error: {ex.Message}");
+                    updateLogs(serverFrom,$"General error: {ex.Message}");
                 }
-            });
-
-            _serverThread.IsBackground = true;
-            _serverThread.Start();
+            }).Start();
         }
         private void updateLogs(string from ,string message)
         {
             Invoke(new Action(() =>
             {
-                richTextBox1.AppendText($"{DateTime.Now:HH:mm:ss} {from}:{message}");
+                richTextBox1.AppendText($"\n {DateTime.Now:HH:mm:ss} {from}:{message}");
             }));
         }
         private void clearLogs()
@@ -78,35 +66,36 @@ namespace winOsManagement
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            string usertext = textBox1.Text.Trim();
-            if (String.IsNullOrEmpty(usertext)){
-                updateLogs(clientFrom, "Missing message. Please type something before sending");
+            string message = textBox1.Text.Trim();
+            if (string.IsNullOrEmpty(message))
+            {
+                updateLogs(clientFrom,"Please enter a message to send.");
                 return;
             }
+
             try
             {
-                using (NamedPipeClientStream pipeclient = new NamedPipeClientStream(".", "TestPipe", PipeDirection.InOut))
+                using (NamedPipeClientStream pipeClient = new NamedPipeClientStream(".", "TestPipe", PipeDirection.InOut))
                 {
-                    pipeclient.Connect();
-                    updateLogs(clientFrom, "Connected to server");
+                    updateLogs(clientFrom,"Connecting to server...");
+                    pipeClient.Connect();
+                    updateLogs(clientFrom,"Connected to server.");
 
-                    using (StreamWriter sw = new StreamWriter(pipeclient))
+                    // Use a single StreamWriter and StreamReader instance
+                    using (StreamWriter sw = new StreamWriter(pipeClient))
                     {
-                        sw.Write(usertext);
-                        sw.Flush();
-                        updateLogs(clientFrom, "Sent to server");
+                        // Send the message to the server
+                        sw.WriteLine(message);
+                        sw.Flush(); // Ensure the message is sent immediately
+                        updateLogs(clientFrom, $"Sent message: {message}");
                     }
-                    using (StreamReader sr = new StreamReader(pipeclient))
-                    {
-                        string serverResponse = sr.ReadLine();
-                        updateLogs(clientFrom, "serverResponse");
-                    }
-                    updateLogs(clientFrom, "Connection closed");
+                    pipeClient.Close();
                 }
+                updateLogs(clientFrom, "Connection closed.");
             }
             catch (IOException ex)
             {
-                updateLogs(clientFrom, $"Pipe error: {ex.Message}");
+                updateLogs(clientFrom,$"Pipe error: {ex.Message}");
             }
             catch (Exception ex)
             {
