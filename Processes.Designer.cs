@@ -35,6 +35,7 @@ namespace winOsManagement
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -49,6 +50,7 @@ namespace winOsManagement
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.label2);
             this.splitContainer1.Panel1.Controls.Add(this.label1);
             // 
             // splitContainer1.Panel2
@@ -68,12 +70,13 @@ namespace winOsManagement
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(463, 74);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Processes";
+            this.label1.Text = "Processes Demo Dashboard";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(17, 262);
+            this.button4.Location = new System.Drawing.Point(26, 318);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(250, 50);
             this.button4.TabIndex = 3;
@@ -83,7 +86,7 @@ namespace winOsManagement
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(17, 187);
+            this.button3.Location = new System.Drawing.Point(26, 233);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(250, 50);
             this.button3.TabIndex = 2;
@@ -93,7 +96,7 @@ namespace winOsManagement
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(17, 113);
+            this.button2.Location = new System.Drawing.Point(26, 132);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(250, 50);
             this.button2.TabIndex = 1;
@@ -103,13 +106,22 @@ namespace winOsManagement
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(17, 30);
+            this.button1.Location = new System.Drawing.Point(26, 35);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(250, 50);
             this.button1.TabIndex = 0;
             this.button1.Text = "View Processes";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label2
+            // 
+            this.label2.Location = new System.Drawing.Point(47, 421);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(395, 20);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Click on any of the buttons on the right to access demos for OS Process functions" +
+    "";
             // 
             // Processes
             // 
@@ -135,5 +147,6 @@ namespace winOsManagement
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label2;
     }
 }

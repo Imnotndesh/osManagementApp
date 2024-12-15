@@ -17,7 +17,6 @@ namespace winOsManagement
             InitializeComponent();
             this.Text = "DashBoard";
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();

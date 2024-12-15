@@ -49,5 +49,10 @@ namespace winOsManagement
             launchProcessForm.ShowDialog();
             this.Show();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

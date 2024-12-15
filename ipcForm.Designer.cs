@@ -33,6 +33,7 @@ namespace winOsManagement
             this.label1 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -47,6 +48,7 @@ namespace winOsManagement
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.label2);
             this.splitContainer1.Panel1.Controls.Add(this.label1);
             // 
             // splitContainer1.Panel2
@@ -54,21 +56,22 @@ namespace winOsManagement
             this.splitContainer1.Panel2.Controls.Add(this.button3);
             this.splitContainer1.Panel2.Controls.Add(this.button2);
             this.splitContainer1.Size = new System.Drawing.Size(800, 450);
-            this.splitContainer1.SplitterDistance = 378;
+            this.splitContainer1.SplitterDistance = 470;
             this.splitContainer1.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(17, 187);
+            this.label1.Location = new System.Drawing.Point(3, 170);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(237, 65);
+            this.label1.Size = new System.Drawing.Size(464, 65);
             this.label1.TabIndex = 0;
             this.label1.Text = "Inter-Process Communication";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(93, 192);
+            this.button3.Location = new System.Drawing.Point(52, 195);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(235, 60);
             this.button3.TabIndex = 2;
@@ -78,13 +81,23 @@ namespace winOsManagement
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(91, 77);
+            this.button2.Location = new System.Drawing.Point(52, 77);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(237, 58);
             this.button2.TabIndex = 1;
             this.button2.Text = "Demo SOCKET communication";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // label2
+            // 
+            this.label2.Location = new System.Drawing.Point(12, 418);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(438, 23);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Click on any of the buttons on the right to access demos for OS IPC functions";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // ipcForm
             // 
@@ -108,5 +121,6 @@ namespace winOsManagement
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label2;
     }
 }

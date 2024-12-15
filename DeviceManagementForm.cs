@@ -23,5 +23,19 @@ namespace winOsManagement
             this.Hide();
             deviceListForm.ShowDialog();
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            DeviceListForm deviceListForm = new DeviceListForm();
+            this.Hide();
+            deviceListForm.ShowDialog();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            DeviceListForm deviceListForm = new DeviceListForm();
+            this.Hide();
+            deviceListForm.ShowDialog();
+        }
     }
 }

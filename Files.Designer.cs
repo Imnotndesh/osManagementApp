@@ -34,6 +34,7 @@ namespace winOsManagement
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -48,6 +49,7 @@ namespace winOsManagement
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.label2);
             this.splitContainer1.Panel1.Controls.Add(this.label1);
             // 
             // splitContainer1.Panel2
@@ -75,7 +77,7 @@ namespace winOsManagement
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(240, 62);
             this.button3.TabIndex = 2;
-            this.button3.Text = "File Information";
+            this.button3.Text = "File Information Demo";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -85,7 +87,7 @@ namespace winOsManagement
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(241, 63);
             this.button2.TabIndex = 1;
-            this.button2.Text = "Delete File";
+            this.button2.Text = "Delete File Demo";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -95,9 +97,17 @@ namespace winOsManagement
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(242, 56);
             this.button1.TabIndex = 0;
-            this.button1.Text = "Create File";
+            this.button1.Text = "Create File Demo";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label2
+            // 
+            this.label2.Location = new System.Drawing.Point(95, 421);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(329, 20);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Click on any of the buttons on the right to access demos for OS File Functions";
             // 
             // Files
             // 
@@ -122,5 +132,6 @@ namespace winOsManagement
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label2;
     }
 }

@@ -34,6 +34,7 @@ namespace winOsManagement
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -48,6 +49,7 @@ namespace winOsManagement
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.label2);
             this.splitContainer1.Panel1.Controls.Add(this.label1);
             // 
             // splitContainer1.Panel2
@@ -66,8 +68,9 @@ namespace winOsManagement
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(479, 59);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Device Management";
+            this.label1.Text = "Device Management Dashboard";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // button3
             // 
@@ -97,6 +100,16 @@ namespace winOsManagement
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // label2
+            // 
+            this.label2.Location = new System.Drawing.Point(20, 421);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(473, 20);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Click on any of the buttons on the right to access demos for OS Device Management" +
+    " functions";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
             // DeviceManagementForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -120,5 +133,6 @@ namespace winOsManagement
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label2;
     }
 }
